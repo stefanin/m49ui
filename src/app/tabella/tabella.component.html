@@ -1,0 +1,24 @@
+
+
+
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filtro">
+  </div>
+
+<table  >
+  <thead   >
+    <tr>
+      <th  *ngFor="let c of colonne">{{c}}</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of dati | filter:filtro" >
+
+        <td *ngFor="let c of colonne">{{d[c]}}</td>
+    </tr>
+
+
+  </tbody>
+
+</table>

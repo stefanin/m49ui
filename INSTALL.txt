@@ -1,0 +1,11 @@
+npm i ng2-search-filter
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
+
+filtro: string;
+
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filtro">
+  </div>
+
+  tr *ngFor="let d of dati | filter:filtro">
