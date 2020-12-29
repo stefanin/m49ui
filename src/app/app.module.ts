@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { TabellaComponent } from './tabella/tabella.component';
 import { FormsModule } from '@angular/forms';
+import { CellaComponent } from './cella/cella.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TabellaComponent
+    TabellaComponent,
+    CellaComponent
   ],
   imports: [
     BrowserModule,

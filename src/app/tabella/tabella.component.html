@@ -15,7 +15,11 @@
   <tbody>
     <tr *ngFor="let d of dati | filter:filtro" >
 
-        <td *ngFor="let c of colonne">{{d[c]}}</td>
+        <td *ngFor="let c of colonne">
+
+          <cella d="{{d[c]}}" c="{{c}}"></cella>
+
+          </td>
     </tr>
 
 
