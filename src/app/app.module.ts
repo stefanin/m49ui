@@ -9,12 +9,14 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { TabellaComponent } from './tabella/tabella.component';
 import { FormsModule } from '@angular/forms';
 import { CellaComponent } from './cella/cella.component';
+import { TagComponent } from './view/tag/tag.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabellaComponent,
-    CellaComponent
+    CellaComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,
