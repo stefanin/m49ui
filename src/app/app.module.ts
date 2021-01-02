@@ -10,13 +10,16 @@ import { TabellaComponent } from './tabella/tabella.component';
 import { FormsModule } from '@angular/forms';
 import { CellaComponent } from './cella/cella.component';
 import { TagComponent } from './view/tag/tag.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabellaComponent,
     CellaComponent,
-    TagComponent
+    TagComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { TagComponent } from './view/tag/tag.component';
     HttpClientModule,
     FormsModule,
     Ng2SearchPipeModule,
+    NgbModule,
   ],
   providers: [M49sSQLserviceService],
   bootstrap: [AppComponent]

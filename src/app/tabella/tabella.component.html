@@ -5,15 +5,15 @@
     <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filtro">
   </div>
 
-<table  >
+<table  class="table table-striped">
   <thead   >
     <tr>
-      <th  *ngFor="let c of colonne">{{c}}</th>
+      <th scope="col" *ngFor="let c of colonne">{{c}}</th>
     </tr>
 
   </thead>
   <tbody>
-    <tr *ngFor="let d of dati | filter:filtro" >
+    <tr scope="row" *ngFor="let d of dati | filter:filtro" >
 
         <td *ngFor="let c of colonne">
 

@@ -9,3 +9,6 @@ filtro: string;
   </div>
 
   tr *ngFor="let d of dati | filter:filtro">
+
+
+ng add @ng-bootstrap/ng-bootstrap
