@@ -12,6 +12,9 @@ import { CellaComponent } from './cella/cella.component';
 import { TagComponent } from './view/tag/tag.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MenuComponent } from './menu/menu.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LocatinsComponent } from './locatins/locatins.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { MenuComponent } from './menu/menu.component';
     TabellaComponent,
     CellaComponent,
     TagComponent,
-    MenuComponent
+    MenuComponent,
+    PageNotFoundComponent,
+    LocatinsComponent
   ],
   imports: [
     BrowserModule,
