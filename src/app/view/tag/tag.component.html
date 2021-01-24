@@ -1,1 +1,25 @@
-Tag : {{tag}}
+
+<tabella
+vSQL="SELECT `tag`, `Name`,`Company`,`Address`,`City`,`Zip`,`Country` FROM `TAGLocation` where tag='{{tag}}' order by `Country`,`City`,`Name`"
+[colonne]="['tag', 'Name','Company','Address','City','Zip','Country']"
+[ricerca]=false
+></tabella>
+
+<tabella
+vSQL="
+SELECT D.`Type`,D.`Brand`,D.`Model`,D.`SerialNumber`,D.`HostName`,D.`sysDescr`,D.`sysLocation`,D.`UpTime`,D.idD
+FROM `D`
+left join S on S.SerialNumber=D.SerialNumber
+WHERE
+S.tag='{{tag}}'
+and S.SerialNumber not like 'NO-SNMP'
+group by D.SerialNumber
+order by `Type`"
+[colonne]="['Type','Brand','Model','SerialNumber','HostName','sysDescr','sysLocation','UpTime','idD']"
+></tabella>
+
+
+<tabella
+vSQL="SELECT `Alert`,ip,`IcmpTest`,`SerialNumber`,`grp`,`nmap`,`Note` FROM `S` WHERE `tag`='{{tag}}'"
+[colonne]="['Alert','ip','IcmpTest','SerialNumber','grp','nmap','Note']"
+></tabella>

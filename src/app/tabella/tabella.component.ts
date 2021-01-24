@@ -8,8 +8,9 @@ import { M49sSQLserviceService } from "../m49s-sqlservice.service";
 })
 export class TabellaComponent implements OnInit {
   vidSQL='0';
-  @Input() vSQL: string ;
-  @Input() colonne: string[];
+  @Input() vSQL: string ;// sql query
+  @Input() colonne: string[];// column name
+  @Input() ricerca: boolean=true;// enable o disable Table Research
   dati: any=[];
   filtro: string;
 
